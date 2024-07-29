@@ -5,7 +5,7 @@ import soundfile as sf
 import subprocess
 
 def play_mp3(path):
-    subprocess.Popen(['mpg123', '-q', path]).wait()
+    subprocess.Popen(['mpv', path]).wait()
 
 # Initialiser le client Polly
 client = boto3.client('polly')
@@ -32,4 +32,4 @@ def ReadText(text):
 
 
     # Nettoyer les fichiers audio temporaires
-    os.remove("output.mp3")
+    #os.remove("output.mp3")
